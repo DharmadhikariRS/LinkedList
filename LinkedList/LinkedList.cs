@@ -123,6 +123,15 @@ namespace LinkedList
 
             }
         }
-
+        internal void DeleteCertainNum(int Element)
+        {
+            Node temp = Head;
+            while (temp.Next.data != Element)
+            {
+                temp = temp.Next;
+            }
+            temp.Next = temp.Next.Next;
+            Console.WriteLine("Deleted element {0} ", Element);
+        }
     }
 }

@@ -15,6 +15,8 @@
             Console.WriteLine("Press 6 delete last node in  linked List");
             Console.WriteLine("Press 7 search the node  linked List");
             Console.WriteLine("Press 8 insert node Inbetween  linked List");
+            Console.WriteLine("Press 9 delete node at specific position in  linked List");
+
             int input = int.Parse(Console.ReadLine());
             switch (input)
             {
@@ -74,6 +76,15 @@
                     linkedList.InsertInBetween(40, 30);
                     linkedList.Display();
                     break;
+                case 9:
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(40);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    linkedList.DeleteCertainNum(40);
+                    linkedList.Display();
+                    break ;
                 default:
                     Console.WriteLine("Wrong selection");
                     break;
