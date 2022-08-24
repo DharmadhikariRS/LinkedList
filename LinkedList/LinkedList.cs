@@ -65,5 +65,19 @@ namespace LinkedList
             }
 
         }
+        internal void InsertInBetween(int Data, int firstNum)
+        {
+            Node node = new Node(Data);
+            Node temp1 = Head;
+
+            while (temp1.data != firstNum)
+            {
+                temp1 = temp1.Next;
+            }
+            node.Next = temp1.Next;
+            temp1.Next = node;
+
+            Console.WriteLine("{0} added after {1} ", node.data, firstNum);
+        }
     }
 }
