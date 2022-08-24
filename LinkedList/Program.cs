@@ -8,6 +8,7 @@
 
             LinkedList linkedList = new LinkedList();
             Console.WriteLine("Press 1 for create a linked List");
+            Console.WriteLine("Press 2 for Add node at first in  linked List");
             int input = int.Parse(Console.ReadLine());
             switch (input)
             {
@@ -15,6 +16,12 @@
                     linkedList.AddLast(56);
                     linkedList.AddLast(30);
                     linkedList.AddLast(70);
+                    linkedList.Display();
+                    break;
+                    case 2:
+                    linkedList.AddFirst(70);
+                    linkedList.AddFirst(30);
+                    linkedList.AddFirst(56);
                     linkedList.Display();
                     break;
                 default:

@@ -46,5 +46,24 @@ namespace LinkedList
 
             }
         }
+
+        internal void AddFirst(int Data)
+        {
+            Node node = new Node(Data);
+            if (Head == null)
+            {
+                Head = node;
+                //    Tail=Head;
+                Console.WriteLine("added " + Head.data);
+            }
+            else
+            {
+                Node temp = node;
+                temp.Next = Head;
+                Head = temp;
+                Console.WriteLine("added " + Head.data);
+            }
+
+        }
     }
 }
