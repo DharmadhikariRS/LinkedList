@@ -12,6 +12,7 @@
             Console.WriteLine("Press 3 to append node at last in linked List");
             Console.WriteLine("Press 4 to add node inbetween linked List");
             Console.WriteLine("Press 5 delete first node in  linked List");
+            Console.WriteLine("Press 6 delete last node in  linked List");
             int input = int.Parse(Console.ReadLine());
             switch (input)
             {
@@ -21,13 +22,13 @@
                     linkedList.AddLast(70);
                     linkedList.Display();
                     break;
-                    case 2:
+                case 2:
                     linkedList.AddFirst(70);
                     linkedList.AddFirst(30);
                     linkedList.AddFirst(56);
                     linkedList.Display();
                     break;
-                    case 3:
+                case 3:
                     linkedList.AddLast(56);
                     linkedList.AddLast(30);
                     linkedList.AddLast(70);
@@ -46,7 +47,15 @@
                     linkedList.Display();
                     linkedList.DeleteFirst();
                     linkedList.Display();
-                break ;
+                    break ;
+                case 6:
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
+                    linkedList.Display();
+                    linkedList.DeleteLast();
+                    linkedList.Display();
+                    break;
                 default:
                     Console.WriteLine("Wrong selection");
                     break;

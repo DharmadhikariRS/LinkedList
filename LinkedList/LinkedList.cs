@@ -92,5 +92,15 @@ namespace LinkedList
                 Console.WriteLine("First num deleted");
             }
         }
+        internal void DeleteLast()
+        {
+            Node temp = Head;
+            while (temp.Next.Next != null)
+            {
+                temp = temp.Next;
+            }
+            temp.Next = null;
+            Console.WriteLine("Last num deleted");
+        }
     }
 }
