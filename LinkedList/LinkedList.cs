@@ -45,6 +45,7 @@ namespace LinkedList
                 temp = temp.Next;
 
             }
+            Console.WriteLine();
         }
 
         internal void AddFirst(int Data)
@@ -78,6 +79,18 @@ namespace LinkedList
             temp1.Next = node;
 
             Console.WriteLine("{0} added after {1} ", node.data, firstNum);
+        }
+        internal void DeleteFirst()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("List is Empty");
+            }
+            else
+            {
+                Head = Head.Next;
+                Console.WriteLine("First num deleted");
+            }
         }
     }
 }
