@@ -16,6 +16,7 @@
             Console.WriteLine("Press 7 search the node  linked List");
             Console.WriteLine("Press 8 insert node Inbetween  linked List");
             Console.WriteLine("Press 9 delete node at specific position in  linked List");
+            Console.WriteLine("Press 10 add node in sorted type in  linked List");
 
             int input = int.Parse(Console.ReadLine());
             switch (input)
@@ -85,6 +86,13 @@
                     linkedList.DeleteCertainNum(40);
                     linkedList.Display();
                     break ;
+                  
+                case 10:
+                    linkedList.AscendingLinkedList();
+                    linkedList.Display();
+
+            
+                    break;
                 default:
                     Console.WriteLine("Wrong selection");
                     break;

@@ -133,5 +133,26 @@ namespace LinkedList
             temp.Next = temp.Next.Next;
             Console.WriteLine("Deleted element {0} ", Element);
         }
+        internal void AscendingLinkedList()
+        {
+            Console.WriteLine("Press y to add element");
+            char ch = char.Parse(Console.ReadLine());
+            List<int> list = new List<int>();
+
+            while (ch == 'y')
+            {
+                Console.WriteLine("Enter the number");
+                int Number = int.Parse(Console.ReadLine());
+                list.Add(Number);
+                Console.WriteLine("Again press y to add and n to stop to add element");
+                ch = char.Parse(Console.ReadLine());
+            }
+            list.Sort();
+            foreach (int item in list)
+            {
+                Console.WriteLine(item);
+                AddLast(item);
+            }
+        }
     }
 }
