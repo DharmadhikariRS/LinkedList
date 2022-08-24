@@ -102,5 +102,26 @@ namespace LinkedList
             temp.Next = null;
             Console.WriteLine("Last num deleted");
         }
+        internal void SearchElement(int Element)
+        {
+            
+            int count = 0;
+            Node temp = Head;
+
+            while (temp != null)
+            {
+                count++;
+                if (temp.data == Element)
+                {
+                    Console.WriteLine();
+
+                    Console.WriteLine("{0} Found at position {1}", temp.data, count);
+                    break;
+                }
+
+                temp = temp.Next;
+
+            }
+        }
     }
 }
